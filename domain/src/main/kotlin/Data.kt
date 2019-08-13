@@ -1,0 +1,1 @@
+data class Data(val a: Int, val b: Int)

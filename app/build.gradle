@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion"
+    }
+}
+
+apply plugin: 'kotlinx-serialization'
+
+group 'bug.serialization'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlinSerializationVersion"
+    implementation project(':domain')
+
+    testImplementation 'junit:junit:4.12'
+}
